@@ -1,0 +1,43 @@
+{
+  "name": "ระบบ POS ร้านอาหาร",
+  "short_name": "POS System",
+  "description": "ระบบจุดขายสำหรับร้านอาหารพร้อม KDS และรายงาน",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#761F1C",
+  "theme_color": "#761F1C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "หน้าจอ POS บนมือถือ"
+    },
+    {
+      "src": "/screenshot-desktop.png", 
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "หน้าจอ POS บนคอมพิวเตอร์"
+    }
+  ],
+  "categories": ["business", "productivity", "food"],
+  "lang": "th",
+  "dir": "ltr"
+}

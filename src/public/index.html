@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <!-- Basic meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ระบบจุดขายสำหรับร้านอาหาร พร้อม KDS และรายงาน">
+    <title>ระบบ POS ร้านอาหาร</title>
+    
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- PWA meta tags -->
+    <meta name="theme-color" content="#761F1C">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="POS System">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    
+    <!-- Tailwind CDN (v4) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,container-queries"></script>
+    
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.0/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- Custom styles -->
+    <style>
+        /* Additional styles would go here if needed */
+        /* Main styles are in /styles/globals.css */
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- React app will mount here -->
+    <div id="root"></div>
+    
+    <!-- Service Worker registration -->
+    <script>
+        // Register service worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    
+    <!-- Firebase SDK (for CLOUD_SYNC mode) -->
+    <script type="module">
+        // Firebase configuration and initialization would go here
+        // This is loaded conditionally when CLOUD_SYNC is enabled
+        // TODO: Implement firebase-config.js integration
+    </script>
+</body>
+</html>
